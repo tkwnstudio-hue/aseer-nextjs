@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --dark: #003B2B;
+  --wash: #092A23;
+  --gold: #C89A38;
+  --sage: #EFF4EC;
+}
+
+@theme inline {
+  --color-dark: var(--dark);
+  --color-wash: var(--wash);
+  --color-gold: var(--gold);
+  --color-sage: var(--sage);
+  --font-arabic: var(--font-noto-sans-arabic);
+  --font-english: var(--font-inter);
+}
+
+html[lang="ar"] body {
+  font-family: var(--font-arabic), var(--font-english), system-ui, sans-serif;
+}
+
+html[lang="en"] body {
+  font-family: var(--font-english), system-ui, sans-serif;
+}
+
+body {
+  background: var(--sage);
+  color: var(--dark);
+}
