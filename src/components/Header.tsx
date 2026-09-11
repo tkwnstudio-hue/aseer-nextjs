@@ -34,8 +34,10 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href.split("#")[0]);
+  const isActive = (href: string) => {
+    if (href.includes("#")) return false;
+    return href === "/" ? pathname === "/" : pathname.startsWith(href);
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-dark text-white">
@@ -77,7 +79,7 @@ export default function Header() {
           <button
             type="button"
             aria-label="بحث"
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10"
+            className="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-dark"
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="11" cy="11" r="7" />
@@ -87,7 +89,7 @@ export default function Header() {
           <button
             type="button"
             aria-label="حسابي"
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10"
+            className="flex h-9 w-9 items-center justify-center rounded-lg bg-white text-dark"
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="8" r="4" />
