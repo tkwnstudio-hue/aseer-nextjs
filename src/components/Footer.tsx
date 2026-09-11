@@ -2,11 +2,14 @@ import Link from "next/link";
 
 function LogoMark() {
   return (
-    <span className="flex h-[58px] w-[58px] shrink-0 items-center justify-center rounded-md bg-gold/15">
-      <svg viewBox="0 0 24 24" className="h-8 w-8 text-gold" fill="currentColor">
-        <path d="M12 3 L21 20 H3 Z" />
-      </svg>
-    </span>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/logo-mark.png"
+      alt=""
+      width={58}
+      height={58}
+      className="shrink-0 rounded-md object-contain"
+    />
   );
 }
 

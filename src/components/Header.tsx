@@ -33,15 +33,16 @@ const REGIONS = [
   },
 ];
 
-function LogoMark({ className = "h-9 w-9" }: { className?: string }) {
+function LogoMark({ size = 36 }: { size?: number }) {
   return (
-    <span
-      className={`flex shrink-0 items-center justify-center rounded-md bg-gold/15 ${className}`}
-    >
-      <svg viewBox="0 0 24 24" className="h-5 w-5 text-gold" fill="currentColor">
-        <path d="M12 3 L21 20 H3 Z" />
-      </svg>
-    </span>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/logo-mark.png"
+      alt=""
+      width={size}
+      height={size}
+      className="shrink-0 rounded-md object-contain"
+    />
   );
 }
 
