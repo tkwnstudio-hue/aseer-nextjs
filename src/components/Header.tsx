@@ -142,7 +142,7 @@ export default function Header() {
         <div className="hidden shrink-0 items-center gap-3 md:flex">
           <button
             type="button"
-            className="rounded-lg border border-sage/35 px-3.5 py-2 text-xs font-bold text-sage transition-colors hover:bg-sage/10 hover:border-sage/60"
+            className="rounded-lg border border-sage/35 px-3.5 py-2 text-sm font-bold text-sage transition-colors hover:bg-sage/10 hover:border-sage/60"
           >
             English
           </button>
@@ -204,7 +204,7 @@ export default function Header() {
             <li>
               <button
                 type="button"
-                className="mt-2 rounded-lg border border-sage/35 px-3 py-1.5 text-xs font-bold"
+                className="mt-2 rounded-lg border border-sage/35 px-3.5 py-2 text-sm font-bold"
               >
                 English
               </button>
